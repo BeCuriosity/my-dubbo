@@ -2,6 +2,8 @@ package consumer;
 
 import framework.ProxyFactory;
 import api.HelloService;//practice admin practice
+import protocol.http.DispatcherServlet;
+
 import java.io.IOException;
 
 /**
@@ -13,6 +15,7 @@ import java.io.IOException;
 
 public class Consumer {
     public static void main(String[] args) throws IOException {
+
          //动态代理helloService代口，实现上底层发起了rpc远程调用
         HelloService proxy = ProxyFactory.getProxy(HelloService.class);
 
